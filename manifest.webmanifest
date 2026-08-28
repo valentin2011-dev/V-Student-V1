@@ -1,0 +1,9 @@
+{
+  "name": "V-Student",
+  "short_name": "V-Student",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#080a0f",
+  "theme_color": "#080a0f",
+  "description": "Dashboard personnel Google Classroom + Calendar"
+}
