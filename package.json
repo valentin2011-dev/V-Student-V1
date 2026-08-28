@@ -1,0 +1,17 @@
+{
+  "name": "v-student-v1",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Personal PWA dashboard for Google Classroom + Google Calendar.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.6.1",
+    "express": "^5.1.0",
+    "express-session": "^1.18.2",
+    "googleapis": "^159.0.0"
+  }
+}
