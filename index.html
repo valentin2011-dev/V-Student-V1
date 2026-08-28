@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b0d12" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+  <title>V-Student — V1</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="bg"></div>
+
+  <header class="topbar">
+    <a class="brand" href="/">
+      <span class="brand-mark">V</span>
+      <span>V-Student</span>
+      <small>V1</small>
+    </a>
+    <div class="top-actions">
+      <span id="user-chip" class="user-chip hidden"></span>
+      <button id="logout" class="ghost hidden">Déconnexion</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="login-view" class="hero-card">
+      <div class="eyebrow">PERSONAL DASHBOARD · V1</div>
+      <h1>Ton école.<br><span>Ton interface.</span></h1>
+      <p>
+        Une interface personnelle qui lit tes devoirs Google Classroom
+        et tes événements Google Calendar. Les données restent liées à ton compte Google.
+      </p>
+      <a class="google-button" href="/auth/google">
+        <span class="google-g">G</span>
+        Continuer avec Google
+      </a>
+      <p class="fineprint">
+        V1 de test local · lecture seule · aucun devoir n'est modifié.
+      </p>
+    </section>
+
+    <section id="app-view" class="hidden">
+      <div class="dashboard-head">
+        <div>
+          <div class="eyebrow">OVERVIEW</div>
+          <h1>Bonjour<span id="first-name"></span> 👋</h1>
+          <p id="updated">Synchronisation...</p>
+        </div>
+        <button id="refresh" class="primary">↻ Actualiser</button>
+      </div>
+
+      <div id="error" class="error hidden"></div>
+
+      <div class="stats">
+        <div class="stat">
+          <span>Devoirs</span>
+          <strong id="stat-homework">—</strong>
+          <small>à venir</small>
+        </div>
+        <div class="stat">
+          <span>Cette semaine</span>
+          <strong id="stat-week">—</strong>
+          <small>devoirs</small>
+        </div>
+        <div class="stat">
+          <span>Cours</span>
+          <strong id="stat-courses">—</strong>
+          <small>actifs</small>
+        </div>
+      </div>
+
+      <div class="grid">
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <span class="panel-kicker">CLASSROOM</span>
+              <h2>Prochains devoirs</h2>
+            </div>
+            <span class="live-dot">LIVE</span>
+          </div>
+          <div id="homework-list" class="list"></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <span class="panel-kicker">CALENDAR</span>
+              <h2>Agenda</h2>
+            </div>
+          </div>
+          <div id="calendar-list" class="list"></div>
+        </section>
+      </div>
+
+      <section class="panel courses-panel">
+        <div class="panel-head">
+          <div>
+            <span class="panel-kicker">CLASSROOM</span>
+            <h2>Mes cours</h2>
+          </div>
+        </div>
+        <div id="courses-list" class="courses"></div>
+      </section>
+    </section>
+  </main>
+
+  <footer>V-Student V1 · Projet perso · lecture seule</footer>
+  <script src="/app.js"></script>
+</body>
+</html>
